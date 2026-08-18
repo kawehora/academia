@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Power Fit — Transforme seu corpo</title>
+
+  <!-- EDITAR AQUI: fonte (se desejar outra fonte, troque o link) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER FIXO -->
+  <header>
+    <div class="logo">POWER FIT</div>
+
+    <!-- BOTÃO DE MENU (mobile) -->
+    <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <nav id="main-nav">
+      <a href="#home">Início</a>
+      <a href="#programas">Programas</a>
+      <a href="#treinadores">Treinadores</a>
+      <a href="#planos">Planos</a>
+      <a class="btn" href="#contato">Contacte-nos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-inner container">
+        
+
+        <!-- EDITAR AQUI: título principal (h1) -->
+        <h1 class="hero-title">TRANSFORME SEU CORPO</h1>
+
+
+        <!-- EDITAR AQUI: subtítulo / descrição -->
+        <p class="subtitle"style="transform: translateY(150px);">Programas personalizados, treinadores especializados e uma comunidade que impulsiona resultados. Comece hoje e veja a diferença.</p>
+
+        <!-- Botões Entrar - saiba mais -->
+        <div class="hero-ctas">
+          <a class="btn transparent"style="margin-left: 900px; position: relative; top: -220px;" href="#planos">
+            <img src="assets/halter.png" alt="Halter" class="btn-img">
+           <span>ENTRAR</span>
+           <span class="arrow">↗</span>
+          </a>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Onde treinamos -->
+    <section class="container">
+      <h2>ONDE A FORÇA VIRA RESULTADO</h2>
+      <div class="features">
+        <div class="card">
+          <img src="assets/equipamentos.jpg" alt="Equipamentos modernos">
+          <h3>Equipamentos de ponta</h3>
+          <p>Máquinas e pesos livres para todos os objetivos de treino.</p>
+        </div>
+        <div class="card">
+          <img src="assets/grupo.jpg" alt="Aulas">
+          <h3>Aulas em grupo</h3>
+          <p>HIIT, força e cardio com treinadores experientes.</p>
+        </div>
+        <div class="card">
+          <img src="assets/individual.jpg" alt="Treinador">
+          <h3>Treinamento individual</h3>
+          <p>Planos personalizados que acompanham sua evolução.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAS -->
+    <section id="programas" class="container">
+
+      <h2>PROGRAMAS DE <span class="text-red">TRANSFORMAÇÃO</span></h2>
+      <div class="programs">
+        <div class="program">
+          <img src="assets/força.png" alt="Força" class="img1">
+          <h4>Força</h4>
+          <p>Programas progressivos para ganhar músculo e potência.</p>
+        </div>
+
+        <div class="program">
+          <img src="assets/emagrecimento.png" alt="Emagrecimento" class="img2">
+          <h4>Emagrecimento</h4>
+          <p>Treinos e nutrição para perda de gordura sustentável.</p>
+        </div>
+
+        <div class="program">
+          <img src="assets/condicionamento.png" alt="Condicionamento" class="img3">
+          <h4>Condicionamento</h4>
+          <p>Melhore resistência e desempenho cardiovascular.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREINADORES -->
+    <section id="treinadores" class="container">
+      <h2>TREINADORES EXPERTS</h2>
+      <div class="trainer">
+        <img src="assets/trainer.jpg" alt="Treinador">
+        <div class="trainer-info">
+          <h3>João Silva — Head Coach</h3>
+          <p>Especialista em força e condicionamento com 10 anos de experiência.</p>
+          <a class="btn" href="#contato">Fazer Avaliação</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="container">
+      <h2>ESCOLHA SEU PLANO</h2>
+      <div class="price-grid">
+        <div class="plan" data-plan="Básico">
+          <h3>Básico</h3>
+          <div class="price">R$69 <span>/mês</span></div>
+          <ul>
+            <li>Acesso à academia</li>
+            <li>Aulas padrão</li>
+            <li>Armários</li>
+          </ul>
+          <a class="btn" href="#contato">Escolher</a>
+        </div>
+
+        <div class="plan" data-plan="Performance">
+          <h3>Performance</h3>
+          <div class="price">R$99 <span>/mês</span></div>
+          <ul>
+            <li>Tudo do Básico</li>
+            <li>Aulas ilimitadas</li>
+            <li>Convida 1 amigo por mês</li>
+          </ul>
+          <a class="btn" href="#contato">Escolher</a>
+        </div>
+
+        <div class="plan" data-plan="Elite">
+          <h3>Elite</h3>
+          <div class="price">R$149 <span>/mês</span></div>
+          <ul>
+            <li>Tudo do Performance</li>
+            <li>Acompanhamento diário</li>
+            <li>Programa nutricional</li>
+          </ul>
+          <a class="btn" href="#contato">Escolher</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+      <div class="cta-banner">
+        <div>
+          <h3>COMECE SUA JORNADA HOJE</h3>
+          <p class="muted">Treine hoje para transformar amanhã.</p>
+        </div>
+        <div>
+          <a class="btn" href="#contato">Junte-se agora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO / CONTATO (abrirá modal pelo JS) -->
+    <div id="contato-anchor" style="display:none"></div>
+  </main>
+
+  <footer>
+    <div class="container footer-top">
+      <div>
+        <h4>Power Fit</h4>
+        <p class="muted">© 2026 Power Fit. Todos os direitos reservados.</p>
+        <p class="muted">Kawê Dev</p>
+      </div>
+      <div class="big-brand">POWER FIT</div>
+    </div>
+  </footer>
+
+  <!-- LIGAÇÕES DE SCRIPTS -->
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
