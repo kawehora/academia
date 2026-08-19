@@ -53,7 +53,7 @@ nav a:active{background:var(--accent);color:#fff;transform:translateY(0)}
 .btn{padding:10px 18px;border-radius:12px;background:var(--accent);color:#ffffff;font-weight:600;transition:transform var(--trans-medium) ease,box-shadow var(--trans-medium) ease,opacity var(--trans-fast) ease;display:inline-flex;align-items:center;justify-content:center;gap:8px;}
 
 header nav a.btn{padding:8px 14px;font-size:13px;}
-.hero .btn.transparent{padding:24px 18px 24px 18px;font-size:14px;width:210px;background:rgba(255,255,255,0.02);border:1px solid rgba(255, 255, 255, 0.113);border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:16px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:relative;right:-520px;top:-100px;}
+.hero .btn.transparent{padding:24px 18px 24px 18px;font-size:14px;width:210px;background:rgba(255,255,255,0.02);border:1px solid rgba(255, 255, 255, 0.113);border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:16px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:relative;right:-520px;top:20px;}
 .trainer .btn{padding:12px 18px;font-size:14px;}
 .plan .btn{padding:12px 18px;font-size:14px;}
 .cta-banner .btn{padding:14px 18px;font-size:15px;}
