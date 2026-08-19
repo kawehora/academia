@@ -71,7 +71,9 @@ main{padding-top:var(--header-h)}
 
 /* logo marca */
 .logo{display:flex;align-items:center;gap:0;font-family:Oswald, sans-serif;font-weight:700;letter-spacing:4px;font-size:24px;color:#fff}
-.logo-image{width:120px;height:120px;object-fit:contain;display:block;flex:none;margin-right:-25px}
+.logo:focus,.logo:focus-visible{outline:none;background:transparent;color:#fff;transform:none;box-shadow:none}
+.logo-image{width:120px;height:120px;object-fit:contain;display:block;flex:none;margin-right:-25px;transition:transform 0.8s cubic-bezier(0.22,1,0.36,1),filter 0.8s cubic-bezier(0.22,1,0.36,1)}
+.logo:hover .logo-image{transform:translateY(-4px) scale(1.03);filter:drop-shadow(0 0 20px rgba(224,32,32,0.5))}
 
 /* NAV */
 nav{display:flex;gap:16px;align-items:center}
