@@ -44,6 +44,9 @@ a{color:inherit;text-decoration:none}
 }
 
 @media (max-width:600px){
+  .intro-screen{animation:intro-screen-out 320ms ease 4.18s forwards}
+  .intro-logo{animation:intro-logo-to-header 4.5s cubic-bezier(0.22,1,0.36,1) forwards}
+
   @keyframes intro-logo-to-header{
     0%,28%{top:50%;left:50%;width:220px;transform:translate(-50%,-50%) rotate(0deg)}
     58%{top:37%;left:37%;width:185px;transform:translate(-50%,-50%) rotate(180deg)}
