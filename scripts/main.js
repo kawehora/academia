@@ -93,6 +93,7 @@
 
   // Modal de contato (criado dinamicamente). Mensagens em PT-BR.
   const ContactModal = (function(){
+    const whatsappUrl = 'https://wa.me/5579998837466';
     let modal;
     function build(){
       modal = document.createElement('div');
@@ -139,11 +140,13 @@
         e.preventDefault();
         const data = new FormData(form);
         const obj = Object.fromEntries(data.entries());
-        // Simulação: salvar localmente e mostrar toast.
-        const inbox = JSON.parse(localStorage.getItem('powerfit:inbox') || '[]');
-        inbox.push({ ...obj, date: new Date().toISOString() });
-        localStorage.setItem('powerfit:inbox', JSON.stringify(inbox));
-        Toast.show('Mensagem enviada — obrigado!');
+        const message = [
+          `Nome: ${obj.name}`,
+          `Email: ${obj.email}`,
+          `Mensagem: ${obj.message || '(não informada)'}`
+        ].join('\n');
+        window.open(`${whatsappUrl}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+        Toast.show('Abrindo o WhatsApp...');
         close();
       });
 
