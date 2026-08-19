@@ -271,7 +271,7 @@ footer{padding:60px 0 80px;background:#070707;color:#fff;margin-top: 110px;}
   h1{font-size:40px}
   .features,.programs,.price-grid{grid-template-columns:1fr}
   .trainer{flex-direction:column}
-  .hero{padding:22px 0;min-height:64vh}
+  .hero{padding:22px 0;min-height:64vh;background-position:42% center;overflow:hidden}
   .hero-inner{gap:10px;padding-top:12px}
   .hero-title{margin-top:0;transform:none}
   .subtitle{margin:0 0 12px;max-width:100%;font-size:14px;line-height:1.5}
