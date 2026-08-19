@@ -28,6 +28,35 @@ body{margin:0;font-family:Poppins,system-ui,Arial;background:var(--bg);color:#ff
 .container{max-width:1200px;margin:0 auto;padding:0 18px}
 a{color:inherit;text-decoration:none}
 
+/* Intro de abertura: centraliza a marca, leva-a ao header e libera a página. */
+.intro-screen{position:fixed;inset:0;display:grid;place-items:center;background:rgba(5,5,5,0.98);z-index:10000;pointer-events:none;animation:intro-screen-out 320ms ease 2.45s forwards}
+.intro-logo{position:fixed;top:50%;left:50%;width:min(280px,55vw);height:auto;object-fit:contain;transform:translate(-50%,-50%);animation:intro-logo-to-header 32.75s cubic-bezier(0.22,1,0.36,1) forwards}
+
+@keyframes intro-logo-to-header{
+  0%,28%{top:50%;left:50%;width:min(280px,55vw);transform:translate(-50%,-50%) rotate(0deg)}
+  58%{top:37%;left:37%;width:230px;transform:translate(-50%,-50%) rotate(180deg)}
+  82%{top:14%;left:14%;width:150px;transform:translate(-50%,-50%) rotate(320deg)}
+  100%{top:-12px;left:40px;width:120px;transform:rotate(360deg)}
+}
+
+@keyframes intro-screen-out{
+  to{opacity:0;visibility:hidden}
+}
+
+@media (max-width:600px){
+  @keyframes intro-logo-to-header{
+    0%,28%{top:50%;left:50%;width:220px;transform:translate(-50%,-50%) rotate(0deg)}
+    58%{top:37%;left:37%;width:185px;transform:translate(-50%,-50%) rotate(180deg)}
+    82%{top:14%;left:14%;width:150px;transform:translate(-50%,-50%) rotate(320deg)}
+    100%{top:-12px;left:12px;width:120px;transform:rotate(360deg)}
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .intro-screen{animation:intro-screen-out 120ms ease 500ms forwards}
+  .intro-logo{animation:intro-logo-to-header 500ms ease forwards}
+}
+
 /* HEADER fixo */
 header{
   position:fixed;top:0;left:0;right:0;
