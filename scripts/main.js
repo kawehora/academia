@@ -44,7 +44,9 @@
     return { show };
   })();
 
-  // Smooth scroll para âncoras internas
+  // =====================================================
+  // SMOOTH SCROLL
+  // =====================================================
   function initSmoothScroll(){
     qsa('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', function(e){
@@ -60,7 +62,9 @@
     });
   }
 
-  // Gerenciador de Planos (persistência em localStorage)
+  // =====================================================
+  // PLANOS
+  // =====================================================
   const Plans = (function(){
     const KEY = 'powerfit:selectedPlan';
     function selectPlan(name){
@@ -91,7 +95,9 @@
     return { bind, restore, selectPlan };
   })();
 
-  // Modal de contato (criado dinamicamente). Mensagens em PT-BR.
+  // =====================================================
+  // MODAL DE CONTATO
+  // =====================================================
   const ContactModal = (function(){
     const whatsappUrl = 'https://wa.me/5579998837466';
     let modal;
@@ -170,7 +176,9 @@
     return { open, close };
   })();
 
-  // Reveal on scroll — re-animar ao subir/voltar
+  // =====================================================
+  // REVEAL ON SCROLL
+  // =====================================================
   function initReveal(){
     try{
       const selectors = ['.card', '.program', '.trainer', '.plan', '.cta-banner', 'h2', '.hero-inner'];
@@ -197,7 +205,9 @@
     } catch(e){ console.warn('reveal init failed', e); }
   }
 
-  // Hero split por letra e animação (em Português — editar intervalo abaixo)
+  // =====================================================
+  // HERO TEXT ANIMATION
+  // =====================================================
   function revealHeroText(heroInner, enter){
     try{
       const h1 = heroInner.querySelector('h1');
@@ -247,12 +257,59 @@
     })();
   }
 
-  // Inicialização geral
+  // =====================================================
+  // ALERTAS FAKE
+  // =====================================================
+  const FakeAlerts = (function(){
+    const names = ['João', 'Cláudio', 'Maria', 'Isabelle', 'Joana', 'Paulo', 'Lucas', 'Fernanda', 'Rafael', 'Ana'];
+    const plans = ['Performace', 'Elite', 'Básico'];
+    let container;
+
+    function ensure(){
+      if (container) return container;
+      container = document.createElement('div');
+      container.className = 'live-alerts';
+      container.setAttribute('aria-live', 'polite');
+      document.body.appendChild(container);
+      return container;
+    }
+
+    function showRandom(){
+      const c = ensure();
+      const name = names[Math.floor(Math.random() * names.length)];
+      const plan = plans[Math.floor(Math.random() * plans.length)];
+      const item = document.createElement('div');
+      item.className = 'live-alert';
+      item.innerHTML = `<strong>${name}</strong> acabou de assinar o plano <span>${plan}</span>.`;
+      c.appendChild(item);
+
+      requestAnimationFrame(()=> item.classList.add('show'));
+
+      setTimeout(()=>{
+        item.classList.remove('show');
+        setTimeout(()=> item.remove(), 350);
+      }, 4200);
+    }
+
+    function start(){
+      if (!document.body) return;
+      ensure();
+      showRandom();
+      setInterval(showRandom, 3500);
+    }
+
+    return { start };
+  })();
+
+  // =====================================================
+  // INIT GERAL
+  // =====================================================
   function init(){
     initSmoothScroll();
     Plans.bind();
     Plans.restore();
     initReveal();
+    FakeAlerts.start();
 
     // menu mobile toggle
     const navToggle = document.getElementById('nav-toggle');
