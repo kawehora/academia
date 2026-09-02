@@ -302,9 +302,9 @@ footer{padding:60px 0 80px;background:#070707;color:#fff;margin-top: 110px;}
   .hero{padding:18px 0;min-height:58vh;background-position:42% center;overflow:hidden}
   .hero-background-text{top:76%;width:100%;font-size:clamp(30px,9vw,44px);line-height:.95;white-space:normal}
   .hero-inner{align-items:center;gap:8px;padding-top:78px;text-align:center}
-  .hero-title{max-width:100%;margin-top:0;transform:translateY(26px);order:1}
+  .hero-title{max-width:100%;margin-top:0;transform:translateY(26px);order:2}
   .subtitle{margin:0 0 12px;max-width:100%;font-size:14px;line-height:1.5}
-  .hero-ctas{width:100%;margin-top:-2px;align-items:center;justify-content:center;order:2}
+  .hero-ctas{width:100%;margin-top:-2px;align-items:center;justify-content:center;order:1}
   .hero .btn.transparent{margin:0 auto;top:-14px;right:0;position:relative;width:140px;padding:13px 10px;align-self:center}
   .hero .btn.transparent .arrow{right:6px;bottom:12px;font-size:2rem}
   .btn-img{width:64px}
