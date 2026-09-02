@@ -208,7 +208,7 @@ h1{font-family:Oswald, sans-serif;font-size:72px;line-height:0.95;margin:0;color
 /* Programas de transformação */
 
 .text-red {
-  color: rgba(225, 20, 20, 0.5); /* ou use var(--accent) se o vermelho principal já estiver definido */
+  color: rgba(224, 32, 32, 0.5);
 }
 
 
