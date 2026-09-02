@@ -296,16 +296,16 @@ footer{padding:60px 0 80px;background:#070707;color:#fff;margin-top: 110px;}
   header{padding:12px;justify-content:space-between}
   .logo{position:static}
   nav{display:none}
-  h1{font-size:clamp(32px,10vw,40px)}
+  h1{font-size:clamp(28px,8.5vw,34px);line-height:1}
   .features,.programs,.price-grid{grid-template-columns:1fr}
   .trainer{flex-direction:column}
-  .hero{padding:22px 0;min-height:70vh;background-position:42% center;overflow:hidden}
-  .hero-background-text{top:78%;width:120%;font-size:clamp(44px,14vw,72px);line-height:.9;white-space:normal}
-  .hero-inner{align-items:flex-start;gap:10px;padding-top:92px}
+  .hero{padding:18px 0;min-height:58vh;background-position:42% center;overflow:hidden}
+  .hero-background-text{top:76%;width:100%;font-size:clamp(30px,9vw,44px);line-height:.95;white-space:normal}
+  .hero-inner{align-items:center;gap:8px;padding-top:78px;text-align:center}
   .hero-title{max-width:100%;margin-top:0;transform:none;order:1}
   .subtitle{margin:0 0 12px;max-width:100%;font-size:14px;line-height:1.5}
-  .hero-ctas{margin-top:8px;align-items:flex-start;order:2}
-  .hero .btn.transparent{margin-left:0;top:0;right:0;position:relative;width:180px;padding:18px 14px 18px 14px;align-self:flex-start}
+  .hero-ctas{width:100%;margin-top:8px;align-items:center;justify-content:center;order:2}
+  .hero .btn.transparent{margin:0 auto;top:0;right:0;position:relative;width:160px;padding:16px 12px;align-self:center}
   .hero .btn.transparent .arrow{right:6px;bottom:12px;font-size:2rem}
   .btn-img{width:64px}
   .big-brand{font-size:48px}
